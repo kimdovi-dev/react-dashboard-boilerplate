@@ -1,24 +1,64 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { BarChart, ScatterCustomChart, Sidebar } from "./components/index";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+      {/* S:Left */}
+      <Sidebar listItem={["home", "charts", "total"]} listType="vertical" />
+
+      {/* S: Content Area */}
+      <div className="pagearea">
+        <h1
+          style={{
+            color: "#1d1955",
+            fontSize: "18px",
+            fontWeight: "bolder",
+            marginBottom: "1rem",
+          }}
         >
-          Learn React
-        </a>
-      </header>
+          TITLE AREA
+        </h1>
+        <div style={{ display: "flex", marginBottom: "2rem" }}>
+          <div className="box">
+            <span>Icons</span>
+            <h3>
+              <strong>$143,624</strong>
+            </h3>
+            <span>Your bank balance</span>
+          </div>
+          <div className="box">
+            <span>Icons</span>
+            <h3>
+              <strong>$143,624</strong>
+            </h3>
+            <span>Your bank balance</span>
+          </div>
+          <div className="box">
+            <span>Icons</span>
+            <h3>
+              <strong>$143,624</strong>
+            </h3>
+            <span>Your bank balance</span>
+          </div>
+        </div>
+        <ScatterCustomChart />
+      </div>
+      {/* E: Content Area */}
+
+      {/* S: Right */}
+      <div className="alarm--pannel">
+        <h1
+          style={{
+            color: "#1d1955",
+            fontSize: "18px",
+            fontWeight: "bolder",
+            marginBottom: "1rem",
+          }}
+        >
+          Status Board
+        </h1>
+      </div>
     </div>
   );
 }
