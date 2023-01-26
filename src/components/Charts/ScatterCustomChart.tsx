@@ -4,6 +4,7 @@ import {
   Legend,
   Scatter,
   ScatterChart,
+  ResponsiveContainer,
   Tooltip,
   XAxis,
   YAxis,
@@ -76,21 +77,19 @@ const ScatterCustomChart = () => {
     },
   ];
   return (
-    <div className="chart-wrapper">
-      <ScatterChart
-        width={800}
-        height={250}
-        margin={{ top: 20, right: 20, bottom: 10, left: 10 }}
-      >
-        <CartesianGrid strokeDasharray="3 3" />
-        <XAxis dataKey="x" name="stature" unit="cm" />
-        <YAxis dataKey="y" name="weight" unit="kg" />
-        <ZAxis dataKey="z" range={[64, 144]} name="score" unit="km" />
-        <Tooltip cursor={{ strokeDasharray: "3 3" }} />
-        <Legend />
-        <Scatter name="A school" data={data01} fill="#8884d8" />
-        <Scatter name="B school" data={data02} fill="#82ca9d" />
-      </ScatterChart>
+    <div className="chart-wrapper half-size">
+      <ResponsiveContainer width='100%' height={250}>
+        <ScatterChart margin={{ top: 20, right: 20, bottom: 10, left: 10 }}>
+          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="x" name="stature" unit="cm" />
+          <YAxis dataKey="y" name="weight" unit="kg" />
+          <ZAxis dataKey="z" range={[64, 144]} name="score" unit="km" />
+          <Tooltip cursor={{ strokeDasharray: "3 3" }} />
+          <Legend />
+          <Scatter name="A school" data={data01} fill="#8884d8" />
+          <Scatter name="B school" data={data02} fill="#82ca9d" />
+        </ScatterChart>
+      </ResponsiveContainer>
     </div>
   );
 };

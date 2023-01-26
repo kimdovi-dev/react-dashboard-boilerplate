@@ -73,6 +73,7 @@
   background-color: #f1f1fc;
   padding: 2rem;
 }
+
 .chart-wrapper {
   width: 100%;
   padding: 1rem;
@@ -80,4 +81,12 @@
   text-align: center;
   background-color: #fff;
   box-shadow: 1px 1px 5px #bbb;
+  margin-bottom: 1.5rem;
+  
+  &.half-size {
+    width: calc(50% - 2rem);
+    display: inline-flex;
+    margin-right: 1rem;
+    padding: 1.5rem;
+  }
 }

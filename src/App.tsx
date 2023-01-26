@@ -1,5 +1,5 @@
 import React from "react";
-import { BarChart, ScatterCustomChart, Sidebar } from "./components/index";
+import { BarChartComponent, ScatterCustomChart, Sidebar, LineChartComponets } from "./components/index";
 
 function App() {
   return (
@@ -19,6 +19,7 @@ function App() {
         >
           TITLE AREA
         </h1>
+          {/* S: BOX WRAPPER */}
         <div style={{ display: "flex", marginBottom: "2rem" }}>
           <div className="box">
             <span>Icons</span>
@@ -42,7 +43,13 @@ function App() {
             <span>Your bank balance</span>
           </div>
         </div>
+        {/* E: BOX WRAPPER */}
+        
+        {/* S: Chart Area */}
         <ScatterCustomChart />
+        <LineChartComponets />
+        <BarChartComponent />
+        
       </div>
       {/* E: Content Area */}
 

@@ -1,4 +1,7 @@
 import Sidebar from "./Atomic/Sidebar";
-import BarChart from "./Charts/BarChart";
+import BarChartComponent from "./Charts/BarChartComponent";
 import ScatterCustomChart from "./Charts/ScatterCustomChart";
-export { Sidebar, BarChart, ScatterCustomChart };
+import PieChartComponent from './Charts/PieChartComponent'
+import LineChartComponets from './Charts/LineChartComponets'
+
+export { Sidebar, BarChartComponent, ScatterCustomChart, PieChartComponent, LineChartComponets };
