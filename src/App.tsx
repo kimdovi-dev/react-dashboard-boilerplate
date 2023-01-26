@@ -8,12 +8,10 @@ import {
   AlarmBoard,
 } from "./components/index";
 
-import { getData } from "./utils/getData";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-
+import { useQuery } from 'react-query'
 
 function App() {
-  // const [first, setfirst] = useState("");
+  // const {} = useQuery('user',)
   // S: Data fetch
   useEffect(() => {
     // const res = getData("/");

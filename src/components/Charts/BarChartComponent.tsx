@@ -4,9 +4,7 @@ import {
   Bar,
   ResponsiveContainer,
   XAxis,
-  YAxis,
-  LabelList,
-  Line,
+  YAxis
 } from "recharts";
 
 const BarChartComponent = () => {
