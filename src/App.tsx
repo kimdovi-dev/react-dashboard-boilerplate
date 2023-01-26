@@ -1,7 +1,22 @@
-import React from "react";
-import { BarChartComponent, ScatterCustomChart, Sidebar, LineChartComponets } from "./components/index";
+import React, { useEffect, useState } from "react";
+import {
+  BarChartComponent,
+  ScatterCustomChart,
+  Sidebar,
+  LineChartComponets,
+  ComposedChartComponent,
+} from "./components/index";
+import { getData } from "./utils/getData";
 
 function App() {
+  const [first, setfirst] = useState("");
+
+  // S: Data fetch
+  useEffect(() => {
+    // const res = getData("/");
+    // setfirst(first);
+  }, []);
+
   return (
     <div className="App">
       {/* S:Left */}
@@ -19,8 +34,15 @@ function App() {
         >
           TITLE AREA
         </h1>
-          {/* S: BOX WRAPPER */}
+        {/* S: BOX WRAPPER */}
         <div style={{ display: "flex", marginBottom: "2rem" }}>
+          <div className="box">
+            <span>Icons</span>
+            <h3>
+              <strong>$143,624</strong>
+            </h3>
+            <span>Your bank balance</span>
+          </div>
           <div className="box">
             <span>Icons</span>
             <h3>
@@ -44,12 +66,13 @@ function App() {
           </div>
         </div>
         {/* E: BOX WRAPPER */}
-        
+
         {/* S: Chart Area */}
         <ScatterCustomChart />
         <LineChartComponets />
         <BarChartComponent />
-        
+        <ComposedChartComponent />
+        {/* E: Chart Area */}
       </div>
       {/* E: Content Area */}
 
@@ -65,6 +88,18 @@ function App() {
         >
           Status Board
         </h1>
+
+        {/* S: ListComponent로 빼기 */}
+        <div className="">
+          <div className="alarm-box">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
+              quasi veniam tempore excepturi vitae qui tempora odit iste,
+              necessitatibus, ipsam nobis ducimus!
+            </p>
+          </div>
+        </div>
+        {/* E: ListComponent로 빼기 */}
       </div>
     </div>
   );
