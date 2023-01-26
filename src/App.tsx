@@ -5,12 +5,14 @@ import {
   Sidebar,
   LineChartComponets,
   ComposedChartComponent,
+  AlarmBoard,
 } from "./components/index";
 import { getData } from "./utils/getData";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hello from "./components/Hello";
 
 function App() {
-  const [first, setfirst] = useState("");
-
+  // const [first, setfirst] = useState("");
   // S: Data fetch
   useEffect(() => {
     // const res = getData("/");
@@ -21,7 +23,6 @@ function App() {
     <div className="App">
       {/* S:Left */}
       <Sidebar listItem={["home", "charts", "total"]} listType="vertical" />
-
       {/* S: Content Area */}
       <div className="pagearea">
         <h1
@@ -35,7 +36,7 @@ function App() {
           TITLE AREA
         </h1>
         {/* S: BOX WRAPPER */}
-        <div style={{ display: "flex", marginBottom: "2rem" }}>
+        <div className="slider-wrapper">
           <div className="box">
             <span>Icons</span>
             <h3>
@@ -72,35 +73,11 @@ function App() {
         <LineChartComponets />
         <BarChartComponent />
         <ComposedChartComponent />
-        {/* E: Chart Area */}
       </div>
       {/* E: Content Area */}
 
       {/* S: Right */}
-      <div className="alarm--pannel">
-        <h1
-          style={{
-            color: "#1d1955",
-            fontSize: "18px",
-            fontWeight: "bolder",
-            marginBottom: "1rem",
-          }}
-        >
-          Status Board
-        </h1>
-
-        {/* S: ListComponent로 빼기 */}
-        <div className="">
-          <div className="alarm-box">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas
-              quasi veniam tempore excepturi vitae qui tempora odit iste,
-              necessitatibus, ipsam nobis ducimus!
-            </p>
-          </div>
-        </div>
-        {/* E: ListComponent로 빼기 */}
-      </div>
+      <AlarmBoard />
     </div>
   );
 }

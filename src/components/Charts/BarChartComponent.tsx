@@ -11,39 +11,6 @@ import {
 
 const BarChartComponent = () => {
   const data01 = [
-    {
-      x: 100,
-      y: 200,
-      z: 200,
-    },
-    {
-      x: 120,
-      y: 100,
-      z: 260,
-    },
-    {
-      x: 170,
-      y: 300,
-      z: 400,
-    },
-    {
-      x: 140,
-      y: 250,
-      z: 280,
-    },
-    {
-      x: 150,
-      y: 400,
-      z: 500,
-    },
-    {
-      x: 110,
-      y: 280,
-      z: 200,
-    },
-  ];
-
-  const data02 = [
     { x: "2015-12-24", open: 511.53, high: 514.98, low: 505.79, close: 506.4 },
     { x: "2015-12-25", open: 512.53, high: 514.88, low: 505.69, close: 510.34 },
     { x: "2015-12-26", open: 511.83, high: 514.98, low: 505.59, close: 507.23 },
@@ -58,18 +25,15 @@ const BarChartComponent = () => {
   return (
     <>
       <div className="chart-wrapper half-size prvnt--ovrflowed">
-        <ResponsiveContainer width={'100%'} height={250} className="text-center">
-          <BarChart width={430} height={170} data={data02}>
+        <ResponsiveContainer
+          width={"100%"}
+          height={250}
+          className="text-center"
+        >
+          <BarChart width={430} height={170} data={data01}>
             <XAxis type="category" orientation="bottom" stroke="#285A64" />
             <YAxis orientation="left" stroke="#285A64" />
-            <Bar dataKey="high" fill="#8884d8" width={30}>
-              <Line></Line>
-              {/* <LabelList
-            dataKey="x"
-            position="insideRight"
-            style={{ fill: "blue" }}
-          /> */}
-            </Bar>
+            <Bar dataKey="high" fill="#8884d8" width={30} />
           </BarChart>
         </ResponsiveContainer>
       </div>

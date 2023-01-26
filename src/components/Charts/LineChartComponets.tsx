@@ -11,8 +11,6 @@ import {
 } from "recharts";
 
 const LineChartComponets = () => {
-
-  
     const data = [
     {
       name: "Page A",
@@ -57,8 +55,6 @@ const LineChartComponets = () => {
       amt: 2100,
     },
   ];
-
-
 
   return (
     <div className="chart-wrapper half-size">

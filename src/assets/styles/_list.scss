@@ -64,7 +64,7 @@
   width: 15rem;
   height: 15rem;
   padding: 1.5rem;
-  display: flex;
+  display: inline-flex;
   flex-direction: column;
   justify-content: space-around;
   border-radius: 1rem;
@@ -81,13 +81,29 @@
 
 .alarm--pannel {
   position: absolute;
-  width: 40rem;
+  width: 30rem;
   height: calc(100% - 3rem);
   right: 1.5rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
   box-shadow: 1px 1px 5px #bbb;
   background-color: #f1f1fc;
-  padding: 2rem;
+  padding: 1.5rem;
+}
+
+.alarm-box{
+  display: block;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  &.hidden{
+    display: none;
+  }
+
+  button{
+    position: absolute;
+    right: 0;
+  }
 }
 
 .chart-wrapper {
@@ -107,4 +123,14 @@
   }
 }
 
+.slider-wrapper{
+  width: 100%;
+  overflow-y: auto;
+  margin-bottom: 1rem;
+}
 
+
+.scrollbar{
+
+  
+}
