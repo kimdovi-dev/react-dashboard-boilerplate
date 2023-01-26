@@ -37,9 +37,9 @@ const PieChartComponent = () => {
 
   return (
     <PieChart>
-      <Pie dataKey={""}>{
+      <Pie dataKey='x'>{
         data01.map((item, idx) => {
-            return <Cell ></Cell>   
+            return <Cell />   
         })
       }</Pie>
     </PieChart>

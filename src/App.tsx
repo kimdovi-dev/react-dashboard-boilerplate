@@ -1,12 +1,28 @@
-import React from "react";
-import { BarChartComponent, ScatterCustomChart, Sidebar, LineChartComponets } from "./components/index";
+import React, { useEffect, useState } from "react";
+import {
+  BarChartComponent,
+  ScatterCustomChart,
+  Sidebar,
+  LineChartComponets,
+  ComposedChartComponent,
+  AlarmBoard,
+} from "./components/index";
+import { getData } from "./utils/getData";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Hello from "./components/Hello";
 
 function App() {
+  // const [first, setfirst] = useState("");
+  // S: Data fetch
+  useEffect(() => {
+    // const res = getData("/");
+    // setfirst(first);
+  }, []);
+
   return (
     <div className="App">
       {/* S:Left */}
       <Sidebar listItem={["home", "charts", "total"]} listType="vertical" />
-
       {/* S: Content Area */}
       <div className="pagearea">
         <h1
@@ -19,8 +35,15 @@ function App() {
         >
           TITLE AREA
         </h1>
-          {/* S: BOX WRAPPER */}
-        <div style={{ display: "flex", marginBottom: "2rem" }}>
+        {/* S: BOX WRAPPER */}
+        <div className="slider-wrapper">
+          <div className="box">
+            <span>Icons</span>
+            <h3>
+              <strong>$143,624</strong>
+            </h3>
+            <span>Your bank balance</span>
+          </div>
           <div className="box">
             <span>Icons</span>
             <h3>
@@ -44,28 +67,17 @@ function App() {
           </div>
         </div>
         {/* E: BOX WRAPPER */}
-        
+
         {/* S: Chart Area */}
         <ScatterCustomChart />
         <LineChartComponets />
         <BarChartComponent />
-        
+        <ComposedChartComponent />
       </div>
       {/* E: Content Area */}
 
       {/* S: Right */}
-      <div className="alarm--pannel">
-        <h1
-          style={{
-            color: "#1d1955",
-            fontSize: "18px",
-            fontWeight: "bolder",
-            marginBottom: "1rem",
-          }}
-        >
-          Status Board
-        </h1>
-      </div>
+      <AlarmBoard />
     </div>
   );
 }
