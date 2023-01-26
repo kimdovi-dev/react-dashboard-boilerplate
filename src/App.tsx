@@ -7,9 +7,10 @@ import {
   ComposedChartComponent,
   AlarmBoard,
 } from "./components/index";
+
 import { getData } from "./utils/getData";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Hello from "./components/Hello";
+
 
 function App() {
   // const [first, setfirst] = useState("");

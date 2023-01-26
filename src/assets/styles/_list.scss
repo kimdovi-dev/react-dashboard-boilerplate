@@ -91,18 +91,20 @@
 }
 
 .alarm-box{
+  position:relative;
   display: block;
   padding: 1rem;
   background-color: #fff;
   border-radius: 5px;
   margin-bottom: 1rem;
+ 
   &.hidden{
     display: none;
   }
 
   button{
     position: absolute;
-    right: 0;
+    right: 0.8rem;
   }
 }
 
@@ -132,5 +134,5 @@
 
 .scrollbar{
 
-  
+
 }
