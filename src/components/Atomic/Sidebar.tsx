@@ -1,10 +1,4 @@
 import React, { FC, useCallback, useState, useEffect } from "react";
-import { IoSearch } from "react-icons/io5";
-import { BiHomeHeart } from "react-icons/bi";
-import { MdOutlineAdd } from "react-icons/md";
-import { FaPowerOff } from "react-icons/fa";
-import { CgMenuGridR } from "react-icons/cg";
-import { HiMenu } from "react-icons/hi";
 
 interface Props {
   listItem: Array<string>;

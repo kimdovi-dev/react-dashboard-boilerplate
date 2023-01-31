@@ -1,22 +1,12 @@
 import React, { useEffect, useState } from "react";
-import {
-  BarChartComponent,
-  ScatterCustomChart,
-  Sidebar,
-  LineChartComponets,
-  ComposedChartComponent,
-  AlarmBoard,
-} from "./components/index";
-
-import { useQuery } from 'react-query'
+import { Sidebar, AlarmBoard, Box } from "./components/index";
+import ChartPage from "./pages/ChartPage";
+import { boxDummy } from "./assets/dummy";
 
 function App() {
   // const {} = useQuery('user',)
   // S: Data fetch
-  useEffect(() => {
-    // const res = getData("/");
-    // setfirst(first);
-  }, []);
+  useEffect(() => {}, []);
 
   return (
     <div className="App">
@@ -34,44 +24,15 @@ function App() {
         >
           TITLE AREA
         </h1>
-        {/* S: BOX WRAPPER */}
-        <div className="slider-wrapper">
-          <div className="box">
-            <span>Icons</span>
-            <h3>
-              <strong>$143,624</strong>
-            </h3>
-            <span>Your bank balance</span>
-          </div>
-          <div className="box">
-            <span>Icons</span>
-            <h3>
-              <strong>$143,624</strong>
-            </h3>
-            <span>Your bank balance</span>
-          </div>
-          <div className="box">
-            <span>Icons</span>
-            <h3>
-              <strong>$143,624</strong>
-            </h3>
-            <span>Your bank balance</span>
-          </div>
-          <div className="box">
-            <span>Icons</span>
-            <h3>
-              <strong>$143,624</strong>
-            </h3>
-            <span>Your bank balance</span>
-          </div>
-        </div>
-        {/* E: BOX WRAPPER */}
 
-        {/* S: Chart Area */}
-        <ScatterCustomChart />
-        <LineChartComponets />
-        <BarChartComponent />
-        <ComposedChartComponent />
+        <div className="slider-wrapper">
+          <Box boxDatas={boxDummy} />
+        </div>
+
+        <div>
+          <ChartPage />
+        </div>
+      
       </div>
       {/* E: Content Area */}
 

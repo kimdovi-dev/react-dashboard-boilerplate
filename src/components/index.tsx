@@ -5,6 +5,7 @@ import PieChartComponent from "./Charts/PieChartComponent";
 import LineChartComponets from "./Charts/LineChartComponets";
 import ComposedChartComponent from "./Charts/ComposedChartComponent";
 import AlarmBoard from "./Atomic/AlarmBoard";
+import { Box } from "./Atomic/Box";
 
 
 export {
@@ -15,4 +16,5 @@ export {
   LineChartComponets,
   ComposedChartComponent,
   AlarmBoard,
+  Box,
 };

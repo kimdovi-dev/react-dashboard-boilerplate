@@ -1,3 +1,9 @@
 .prvnt--ovrflowed{  
     overflow-y: auto;
 }
+
+@mixin setFlex($dis, $jus, $align){
+    display: $dis;
+    justify-content: $jus;
+    align-items: $align;
+}

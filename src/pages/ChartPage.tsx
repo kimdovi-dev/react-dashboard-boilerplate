@@ -9,7 +9,6 @@ import {
 export const ChartPage = () => {
   return (
     <>
-      {/* S: Chart Area */}
       <ScatterCustomChart />
       <LineChartComponets />
       <BarChartComponent />
